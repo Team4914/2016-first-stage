@@ -4,7 +4,7 @@
 Any test projects/files should be pushed to https://github.com/cyamonide/4914-FRC-test.git and not here.
 
 # Remaining tasks
-	- [ ] Code AUTO
+- [ ] Code AUTO
 	- [ ] Code all defense crossings
 	- [ ] Code goal (high or low)
 	- [ ] Work with gyro/accelerometer for drive
