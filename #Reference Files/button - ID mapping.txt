@@ -1,0 +1,29 @@
+## XBOX 360 CONTROLLER ###
+
+-ID-	-BUTTON-
+ 01	A
+ 02	B
+ 03	X
+ 04	Y
+ 05	LEFT BUMPER (top)
+ 06	RIGHT BUMPER (top)
+ 07	BACK
+ 08	START
+ 09	LEFT JOYSTICK BUTTON
+ 10	RIGHT JOYSTICK BUTTON
+
+getPOV(int pov (zero because default POV))
+45 deg increments CW
+-1 if no thumpad button
+
+90 	CW 90 deg turn
+180	CW 180 deg turn
+270	CCW 90 deg turn
+
+-ID-	-AXIS-
+ 01	Left Stick X (left right)
+ 02	Left Stick Y (forward back)
+ 03	Left Trigger
+ 04	Right Trigger
+ 05	Right Stick X (left right)
+ 06	Right Stick Y (forward back)

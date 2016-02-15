@@ -1,0 +1,13 @@
+### XBOX - DRIVER CONTROLLER ###
+-ID-	-Button--Stat-	-Command-
+ 01	A	Done	WhenPressed - Toggle drive type (tank/straight)
+ 02	B	Test	WhenPressed - Invert controls
+POVdown		Incom	WhenPressed - 180 CW, all controls suspended
+POVleft		Incom	WhenPressed - 90 CCW, all controls suspended
+POVright	Incom	WhenPressed - 90 CW, all controls suspended
+
+-ID-	-Axis-	-Stat-	-Command-
+ 04	R Trig	Incom	whileHeld - initiate intake
+
+
+### LOGITECH - SHOOTER/DEFENSE CONTROLLER ###
