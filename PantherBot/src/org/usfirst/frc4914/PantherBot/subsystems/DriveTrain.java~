@@ -54,8 +54,8 @@ public class DriveTrain extends Subsystem {
      */
  	public boolean isTankDrive = true;	// if drive is tank drive
  	public boolean isInvertedDrive = false;	// if controls are inverted or not
- 	public double speedMultiplier = 0.7;	// speed limit multiplier
- 	public double turn90Timeout = 1;	// time (in seconds) to turn 90 degrees
+ 	public static final double speedMultiplier = 0.7;	// speed limit multiplier
+ 	public static final double turn90Timeout = 1;	// time (in seconds) to turn 90 degrees
  	
  	// BEGIN CUSTOM CODE
      
