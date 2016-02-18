@@ -54,7 +54,7 @@ public class RobotMap {
         driveTrainUltra = new Ultrasonic(0, 1);
         LiveWindow.addSensor("Drive Train", "Ultra", driveTrainUltra);
         
-        shooterTopFly = new VictorSP(1);
+        shooterTopFly = new VictorSP(3);
         LiveWindow.addActuator("Shooter", "Top Fly", (VictorSP) shooterTopFly);
         
         shooterBottomFly = new VictorSP(0);

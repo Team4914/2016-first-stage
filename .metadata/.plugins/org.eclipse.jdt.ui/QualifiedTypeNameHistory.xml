@@ -8,4 +8,5 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Ultrasonic"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.PIDController"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.ShooterBot.Robot"/>
 </qualifiedTypeNameHistroy>
