@@ -3113,3 +3113,311 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
 !SUBENTRY 1 org.eclipse.core.expressions 4 201 2016-02-15 19:41:45.208
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+!SESSION 2016-02-16 10:03:30.891 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-16 10:04:37.257
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 10:04:41.507
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 10:04:41.516
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 10:04:41.582
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 10:04:41.589
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 10:04:41.844
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 10:04:41.848
+!MESSAGE Installedjava
+!SESSION 2016-02-16 15:32:24.268 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-16 15:32:48.298
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 15:32:50.439
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 15:32:50.456
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 15:32:50.475
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 15:32:50.493
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 15:32:50.529
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 15:32:50.535
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:34:20.620
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:34:20.624
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:39:55.850
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:39:55.857
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:44:12.769
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:44:12.775
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:45:07.916
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:45:07.920
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:48:14.834
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 15:48:14.839
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:03:55.765
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:03:55.770
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:07:33.899
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:07:33.904
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:18:03.340
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:18:03.350
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:22:57.474
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-16 16:22:57.479
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 17:38:05.764
+!MESSAGE [edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@61dd5fad, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@2d4163fc, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@6701e0ce, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@710374d1, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@7aa87d6b, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@5cd0af41, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@34bf3385, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@5ef06c3f, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@678a11af, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@3ef900b8, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@73173ff9, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@2edb2430, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@196b5f2d, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@6f616078, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@25c3629a, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@524e28b6, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@119f97e5, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@7519470e, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@4b702c85]
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 17:38:05.771
+!MESSAGE [edu.wpi.first.wpilib.plugins.core.wizards.Tag@68d8a6c5, edu.wpi.first.wpilib.plugins.core.wizards.Tag@5953484, edu.wpi.first.wpilib.plugins.core.wizards.Tag@3a0b220f, edu.wpi.first.wpilib.plugins.core.wizards.Tag@705525cf, edu.wpi.first.wpilib.plugins.core.wizards.Tag@5d165b8e, edu.wpi.first.wpilib.plugins.core.wizards.Tag@718b75bc, edu.wpi.first.wpilib.plugins.core.wizards.Tag@12732ad8, edu.wpi.first.wpilib.plugins.core.wizards.Tag@4b510e04, edu.wpi.first.wpilib.plugins.core.wizards.Tag@2474e6cb, edu.wpi.first.wpilib.plugins.core.wizards.Tag@ef8416c, edu.wpi.first.wpilib.plugins.core.wizards.Tag@5568f81, edu.wpi.first.wpilib.plugins.core.wizards.Tag@46b49001, edu.wpi.first.wpilib.plugins.core.wizards.Tag@45f564a2, edu.wpi.first.wpilib.plugins.core.wizards.Tag@9cabe51, edu.wpi.first.wpilib.plugins.core.wizards.Tag@38d1026e]
+!SESSION 2016-02-16 20:07:05.458 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 20:07:20.856
+!MESSAGE Installing tools if necessary
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-16 20:07:20.877
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 20:07:20.889
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 20:07:20.919
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 20:07:20.937
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 20:07:20.979
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-16 20:07:21.008
+!MESSAGE Installedjava
+!SESSION 2016-02-17 13:17:23.486 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-17 13:17:42.497
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 13:17:43.515
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 13:17:43.541
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 13:17:43.556
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 13:17:43.582
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 13:17:43.622
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 13:17:43.668
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-17 15:27:22.120
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-17 15:27:22.126
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-17 15:30:17.793
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-17 15:30:17.801
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-17 15:31:54.580
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-17 15:31:54.586
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2016-02-17 22:22:07.995 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-17 22:22:33.041
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 22:22:34.008
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 22:22:34.027
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 22:22:34.034
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 22:22:34.056
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 22:22:34.666
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-17 22:22:34.799
+!MESSAGE Installedjava
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 3 2016-02-17 22:39:33.748
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\dns_sd.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_65\lib\rt.jar
+  [+] C:\Users\cyamo\wpilib\java\current\lib\NetworkTables.jar
+  [+] C:\Users\cyamo\wpilib\java\current\lib\WPILib.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:170)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:126)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:08:55.836
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:08:55.886
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:10:53.121
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:10:53.128
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:18:39.834
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:18:39.839
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:21:39.457
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:21:39.461
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:26:47.339
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:26:47.343
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:29:10.417
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-18 12:29:10.423
+!MESSAGE Targets: deploy, Mode: run

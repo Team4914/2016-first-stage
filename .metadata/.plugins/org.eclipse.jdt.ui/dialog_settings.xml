@@ -11,6 +11,8 @@
 		<item value="11" key="INCLUDE_MASK"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item value="299" key="size.y"/>
+		<item value="753" key="size.x"/>
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>

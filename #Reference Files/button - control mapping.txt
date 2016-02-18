@@ -2,7 +2,7 @@
 -ID-	-Button--Stat-	-Command-
  01	A	Done	WhenPressed - Toggle drive type (tank/straight)
  02	B	Test	WhenPressed - Invert controls
-POVdown		Incom	WhenPressed - 180 CW, all controls suspended
+POVdown		Incom	WhenPressed - 180 CW, all controls suspended and ***controls inverted***
 POVleft		Incom	WhenPressed - 90 CCW, all controls suspended
 POVright	Incom	WhenPressed - 90 CW, all controls suspended
 
@@ -11,3 +11,13 @@ POVright	Incom	WhenPressed - 90 CW, all controls suspended
 
 
 ### LOGITECH - SHOOTER/DEFENSE CONTROLLER ###
+
+sally port
+- approach and drive up ramp with right align
+- bring articulated arm down on door
+- drive backwards off ramp
+- turn 90 CCW
+- drive forward (left if facing defense from neutral zone) and align with defense
+- turn 90 CCW again (now robot is backwards facing neutral zone, about to drive backward into courtyard)
+- drive backwards through port and off ramp, invert controls
+- any interruptions in AUTO defense commands will result in reset of all part conditions
