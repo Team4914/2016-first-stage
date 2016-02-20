@@ -6,7 +6,11 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.AnalogGyro"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Ultrasonic"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.PIDController"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.ShooterBot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.AnalogInput"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.ADXRS450_Gyro"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 </qualifiedTypeNameHistroy>

@@ -58,13 +58,18 @@ public class Shooter extends Subsystem {
     	bottomFly.set(speed);
     }
     
+    public void setFlySpeed(double topSpeed, double bottomSpeed) {
+    	topFly.set(topSpeed);
+    	bottomFly.set(bottomSpeed);
+    }
+    
     public void stopFly() {
     	setTopFlySpeed(0);
     	setBottomFlySpeed(0);
     }
     
     public void setIntakeSpeed(double speed) {
-    	intake.set(speed);
+    	intake.set(-speed);
     }
     
     public void stopIntake() {

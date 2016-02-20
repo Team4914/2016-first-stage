@@ -37,7 +37,7 @@ public class DriveInvert extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.driveTrain.isTankDrive = !Robot.driveTrain.isTankDrive;
+    	Robot.driveTrain.isInvertedDrive = !Robot.driveTrain.isInvertedDrive;
     }
 
     // Called repeatedly when this Command is scheduled to run
