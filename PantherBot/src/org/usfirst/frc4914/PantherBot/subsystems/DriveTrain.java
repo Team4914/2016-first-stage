@@ -67,7 +67,7 @@ public class DriveTrain extends Subsystem {
      */
  	public boolean isTankDrive = true;	// if drive is tank drive
  	public boolean isInvertedDrive = false;	// if controls are inverted or not
- 	public final double speedMultiplier = 0.85;	// speed limit multiplier
+ 	public final double speedMultiplier = 1;	// speed limit multiplier
  	
  	// BEGIN CUSTOM CODE
      
