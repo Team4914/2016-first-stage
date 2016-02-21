@@ -70,6 +70,9 @@ public class Drive extends Command {
     		new Turn90CCW();
     		break;
     	} // end of POV button (quick-turn) listening
+    	
+    	// prints the stuff
+    	System.out.println(Robot.driveTrain.getUltraDistance());
     }
 
     // Make this return true when this Command no longer needs to run execute()
