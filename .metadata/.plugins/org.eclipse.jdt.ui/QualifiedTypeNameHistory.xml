@@ -13,4 +13,5 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.ADXRS450_Gyro"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.RobotMap"/>
 </qualifiedTypeNameHistroy>

@@ -67,7 +67,8 @@ public class DriveTrain extends Subsystem {
      */
  	public boolean isTankDrive = true;	// if drive is tank drive
  	public boolean isInvertedDrive = false;	// if controls are inverted or not
- 	public final double speedMultiplier = 1;	// speed limit multiplier
+ 	public final double speedMultiplier = 0.85;	// speed limit multiplier
+ 	public double lastUltraReading;
  	
  	// BEGIN CUSTOM CODE
      
@@ -113,12 +114,19 @@ public class DriveTrain extends Subsystem {
     	 return gyro.getAngle();
      }
      
+     public void resetGyro() {
+    	 gyro.reset();
+     }
+     
      /**
       * Returns average voltage of the ultrasonic sensor.
       * @return average voltage of the ultrasonic sensor
       */
      public double getUltraDistance() {
-    	 return ultra.getAverageVoltage();
+    	 if (!(lastUltraReading < 0.17 && lastUltraReading > 0.16)) {
+    		 lastUltraReading = ultra.getAverageVoltage();
+    	 }
+    	 return lastUltraReading;
      }
      
      /**
@@ -140,41 +148,34 @@ public class DriveTrain extends Subsystem {
      }
      
      public void rotateCW(double angle) {
-    	 
-    	if (angle == 0) { angle++; }
-    	else if (angle == 360) { angle--; }
-    	 
-    	double initialBearing, finalBearing;
-    	
-     	initialBearing = getGyroBearing();
-     	finalBearing = (initialBearing + angle) % 360;
-     	
-     	while (getGyroBearing() != finalBearing) {
+    	gyro.reset();
+      	
+      	while (getGyroBearing() < angle) {
 	      	setLeftVictor(1);
 	      	setRightVictor(-1);
       	}
       	
       	stop();
+      	
+      	stop();
      }
      
-     public void rotateCCW(double angle) {
-    	 
-     	if (angle == 0) { angle++; }
-     	else if (angle == 360) { angle--; }
-     	
-    	double initialBearing, finalBearing;
-     	
-      	initialBearing = getGyroBearing();
-      	finalBearing = (initialBearing + 360 - angle) % 360;
+    public void rotateCCW(double angle) {
+    	gyro.reset();
       	
-      	while (getGyroBearing() != finalBearing) {
+      	while (getGyroBearing() > angle || getGyroBearing() == 0) {
 	      	setLeftVictor(-1);
 	      	setRightVictor(1);
       	}
       	
       	stop();
-     }
+    }
+    
+    // experimental
+    public void driveStraightWithGyro(double speed) {
+    	robotDrive.drive(1, -gyro.getAngle() * 0.03);
+    }
      
-     // END CUSTOM CODE
+    // END CUSTOM CODE
 }
 

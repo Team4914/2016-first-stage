@@ -39,7 +39,7 @@ public class FIRESequence extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.shooter.setFlySpeed(1, 0.88);
+    	Robot.shooter.setFlySpeed(1, 0.83);
         Timer.delay(0.75);
         Robot.shooter.setIntakeSpeed(1);
         Timer.delay(0.25);

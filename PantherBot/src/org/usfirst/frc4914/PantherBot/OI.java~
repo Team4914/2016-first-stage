@@ -56,6 +56,7 @@ public class OI {
     public JoystickButton b;
     public JoystickButton rightBumper;
     public JoystickButton leftBumper;
+    public JoystickButton x;
     public Joystick driverJoystick;
     public Joystick shooterJoystick;
 
@@ -68,6 +69,8 @@ public class OI {
         
         driverJoystick = new Joystick(1);
         
+        x = new JoystickButton(driverJoystick, 3);
+        x.whenPressed(new Turn90CW());
         leftBumper = new JoystickButton(driverJoystick, 5);
         leftBumper.whileHeld(new FIREIntake());
         rightBumper = new JoystickButton(driverJoystick, 6);
@@ -87,8 +90,8 @@ public class OI {
         SmartDashboard.putData("Turn 90 CCW", new Turn90CCW());
         SmartDashboard.putData("Turn 180 CW", new Turn180CW());
         SmartDashboard.putData("Toggle Camera Feed", new ToggleCameraFeed());
-        SmartDashboard.putData("FIRE Sequence", new FIRESequence());
         SmartDashboard.putData("FIRE Intake", new FIREIntake());
+        SmartDashboard.putData("FIRE Sequence", new FIRESequence());
         SmartDashboard.putData("AUTO 2 to Goal", new AUTO2toGoal());
         SmartDashboard.putData("AUTO 3 to Goal", new AUTO3toGoal());
         SmartDashboard.putData("AUTO 4 to Goal", new AUTO4toGoal());

@@ -239,7 +239,7 @@ Children:
           name: Command
           type: Command
           validators: *id005
-          value: FireSequence
+          value: FIRE Sequence
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id006
           default: whileHeld
@@ -277,6 +277,35 @@ Children:
           value: whileHeld
       Base: Joystick Button
       Name: Left Bumper
+    - Children: []
+      Properties:
+        Joystick: !!robotbuilder.data.properties.ParentProperty {default: parent,
+          name: Joystick, validators: null, value: Driver Joystick}
+        Parameters: !!robotbuilder.data.properties.ParametersProperty
+          default: []
+          name: Parameters
+          validators: null
+          value: []
+        Button: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id004
+          default: '1'
+          name: Button
+          validators: null
+          value: '3'
+        Command: !!robotbuilder.data.properties.TypeSelectionProperty
+          default: None
+          name: Command
+          type: Command
+          validators: *id005
+          value: Turn 90 CW
+        When to Run: !!robotbuilder.data.properties.ChoicesProperty
+          choices: *id006
+          default: whileHeld
+          name: When to Run
+          validators: null
+          value: whenPressed
+      Base: Joystick Button
+      Name: X
     Properties:
       Number: !!robotbuilder.data.properties.ChoicesProperty
         choices: &id007 ['0', '1', '2', '3', '4', '5']
@@ -315,7 +344,7 @@ Children:
       Commands: !!robotbuilder.data.properties.ListProperty
         default: []
         name: Commands
-        validators: &id010 [List]
+        validators: &id011 [List]
         value:
         - !!robotbuilder.data.CommandGroupEntry
           command:
@@ -340,7 +369,7 @@ Children:
               supports: {}
               type: Command
             name: AUTO Approach Defense
-            properties: &id017
+            properties: &id018
               Parameters: !!robotbuilder.data.properties.ParametersProperty
                 default: []
                 name: Parameters
@@ -481,6 +510,24 @@ Children:
         default: []
         name: Parameters
         validators: null
+        value: []
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: None}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id010 []
+        name: Parameter presets
+        validators: null
+        value: *id010
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: Toggle Camera Feed
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
         value:
         - !!robotbuilder.data.properties.ParameterDescriptor {name: topFlySpeed, type: double}
         - !!robotbuilder.data.properties.ParameterDescriptor {name: bottomFlySpeed,
@@ -521,6 +568,24 @@ Children:
         name: Parameters
         validators: null
         value: []
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Shooter}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: []
+        name: Parameter presets
+        validators: null
+        value: []
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: FIRE Sequence
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value: []
       Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
         default: []
         name: Parameter presets
@@ -529,11 +594,11 @@ Children:
       Commands: !!robotbuilder.data.properties.ListProperty
         default: []
         name: Commands
-        validators: *id010
+        validators: *id011
         value:
-        - &id013 !!robotbuilder.data.CommandGroupEntry
-          command: &id014
-            base: &id012
+        - &id014 !!robotbuilder.data.CommandGroupEntry
+          command: &id015
+            base: &id013
               help: A command specifies an action that the robot can perform.
               name: Command
               properties:
@@ -547,14 +612,14 @@ Children:
                 validators: null
                 value: []
               - !!robotbuilder.data.properties.ParameterSetProperty
-                default: &id011 []
+                default: &id012 []
                 name: Parameter presets
                 validators: null
-                value: *id011
+                value: *id012
               supports: {}
               type: Command
             name: AUTO Drive to Setpoint
-            properties: &id016
+            properties: &id017
               Parameters: !!robotbuilder.data.properties.ParametersProperty
                 default: []
                 name: Parameters
@@ -581,11 +646,11 @@ Children:
             - !!robotbuilder.data.properties.ValuedParameterDescriptor {name: setpoint,
               type: double, value: '0'}
           previous: null
-        - &id015 !!robotbuilder.data.CommandGroupEntry
+        - &id016 !!robotbuilder.data.CommandGroupEntry
           command:
-            base: *id012
+            base: *id013
             name: AUTO Turn to Bearing
-            properties: &id018
+            properties: &id019
               Parameters: !!robotbuilder.data.properties.ParametersProperty
                 default: []
                 name: Parameters
@@ -611,9 +676,9 @@ Children:
             value:
             - !!robotbuilder.data.properties.ValuedParameterDescriptor {name: bearing,
               type: double, value: '60'}
-          previous: *id013
+          previous: *id014
         - !!robotbuilder.data.CommandGroupEntry
-          command: *id014
+          command: *id015
           hasMatch: true
           order: Sequential
           parameters:
@@ -623,7 +688,7 @@ Children:
             value:
             - !!robotbuilder.data.properties.ValuedParameterDescriptor {name: setpoint,
               type: double, value: '0'}
-          previous: *id015
+          previous: *id016
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command Group
@@ -683,15 +748,15 @@ Children:
     Base: Command
     Name: AUTO 5 to Goal
   - Children: []
-    Properties: *id016
+    Properties: *id017
     Base: Command
     Name: AUTO Drive to Setpoint
   - Children: []
-    Properties: *id017
+    Properties: *id018
     Base: Command
     Name: AUTO Approach Defense
   - Children: []
-    Properties: *id018
+    Properties: *id019
     Base: Command
     Name: AUTO Turn to Bearing
   - Children: []
@@ -910,24 +975,6 @@ Children:
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command
     Name: POS 5
-  - Children: []
-    Properties:
-      Parameters: !!robotbuilder.data.properties.ParametersProperty
-        default: []
-        name: Parameters
-        validators: null
-        value: []
-      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: Shooter}
-      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: []
-        name: Parameter presets
-        validators: null
-        value: []
-      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: true}
-    Base: Command
-    Name: FireSequence
   Properties: {}
   Base: Commands
   Name: Commands
