@@ -122,7 +122,7 @@ public class DriveTrain extends Subsystem {
       * Returns average voltage of the ultrasonic sensor.
       * @return average voltage of the ultrasonic sensor
       */
-     public double getUltraDistance() {
+     public double getUltraVoltage() {
     	 if (!(lastUltraReading < 0.17 && lastUltraReading > 0.16)) {
     		 lastUltraReading = ultra.getAverageVoltage();
     	 }
@@ -175,7 +175,11 @@ public class DriveTrain extends Subsystem {
     public void driveStraightWithGyro(double speed) {
     	robotDrive.drive(1, -gyro.getAngle() * 0.03);
     }
-     
+
+	public void drive(double d, double d2) {
+		robotDrive.drive(d, d2);
+	}
+    
     // END CUSTOM CODE
 }
 

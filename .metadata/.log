@@ -8081,3 +8081,92 @@ java.io.FileNotFoundException: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\.m
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2270)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:453)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2016-02-21 17:46:17.069 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-21 17:46:43.745
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:46:46.505
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:46:46.749
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:46:46.756
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:46:46.762
+!MESSAGE Installedjava
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:46:46.869
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:46:46.922
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:51:23.492
+!MESSAGE [edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@2886f5f3, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@371c7b39, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@4991d624, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@53dfb0a8, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@4ce9fe4d, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@1878815a, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@5f9f5487, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@716be52c, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@727366da, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@2edd4b9f, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@bc309af, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@25afdf7e, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@4c0338a7, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@8c6030b, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@1bdbfdcd, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@405495e7, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@15c75b4a, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@2d21dca2, edu.wpi.first.wpilib.plugins.java.wizards.examples.ExampleJavaProject@6950795e]
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 17:51:23.497
+!MESSAGE [edu.wpi.first.wpilib.plugins.core.wizards.Tag@d4f223e, edu.wpi.first.wpilib.plugins.core.wizards.Tag@227d25d6, edu.wpi.first.wpilib.plugins.core.wizards.Tag@19a39f7, edu.wpi.first.wpilib.plugins.core.wizards.Tag@6bea3a13, edu.wpi.first.wpilib.plugins.core.wizards.Tag@1f40bb82, edu.wpi.first.wpilib.plugins.core.wizards.Tag@54586e29, edu.wpi.first.wpilib.plugins.core.wizards.Tag@45da0d4, edu.wpi.first.wpilib.plugins.core.wizards.Tag@3e5d28ee, edu.wpi.first.wpilib.plugins.core.wizards.Tag@245b080c, edu.wpi.first.wpilib.plugins.core.wizards.Tag@33650388, edu.wpi.first.wpilib.plugins.core.wizards.Tag@5a575e30, edu.wpi.first.wpilib.plugins.core.wizards.Tag@d1a17cc, edu.wpi.first.wpilib.plugins.core.wizards.Tag@71fd650b, edu.wpi.first.wpilib.plugins.core.wizards.Tag@6a9f41ff, edu.wpi.first.wpilib.plugins.core.wizards.Tag@ad92442]
+
+!ENTRY org.eclipse.core.resources 4 568 2016-02-21 17:51:40.406
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2016-02-21 17:56:40.706
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2016-02-21 18:02:14.585
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

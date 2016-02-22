@@ -67,7 +67,7 @@ public class FIRESequence extends Command {
     
     // Method calculating shoot power based on ultrasonic reading
     public void setCalculatedFly() {
-    	double distance = Robot.driveTrain.getUltraDistance();
+    	double distance = Robot.driveTrain.getUltraVoltage();
     	
     	Robot.shooter.setFlySpeed(1, 0.88);
     }

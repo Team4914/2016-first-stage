@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.CommandGroup"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
@@ -14,4 +13,5 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.RobotMap"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
 </qualifiedTypeNameHistroy>

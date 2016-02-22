@@ -72,7 +72,7 @@ public class Drive extends Command {
     	} // end of POV button (quick-turn) listening
     	
     	// prints the stuff
-    	System.out.println(Robot.driveTrain.getUltraDistance());
+    	System.out.println(Robot.driveTrain.getUltraVoltage());
     }
 
     // Make this return true when this Command no longer needs to run execute()
