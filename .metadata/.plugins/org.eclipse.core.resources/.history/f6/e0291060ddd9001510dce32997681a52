@@ -39,6 +39,20 @@ public class ToggleCameraFeed extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	int newId;
+    	if (Robot.currentCam == Robot.camback) {
+    		newId = Robot.camfront;
+    	}
+    	else {
+    		newId = Robot.camback;
+    	}
+    	NIVision.IMAQdxStopAcquisition(Robot.currentCam);
+    	NIVision.IMAQdxConfigureGrab(newId);
+        NIVision.IMAQdxStartAcquisition(newId);
+        Robot.currentCam = newId;
+        
+      	NIVision.IMAQdxGrab(Robot.currentCam, Robot.frame, 1);
+        Robot.server.setImage(Robot.frame);
     }
 
     // Called repeatedly when this Command is scheduled to run
