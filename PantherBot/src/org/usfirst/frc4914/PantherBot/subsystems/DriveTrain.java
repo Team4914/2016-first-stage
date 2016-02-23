@@ -156,16 +156,12 @@ public class DriveTrain extends Subsystem {
       	}
       	
       	stop();
-      	
-      	stop();
      }
      
-    public void rotateCCW(double angle) {
-    	gyro.reset();
-      	
-      	while (getGyroBearing() > angle || getGyroBearing() < 10) {
-	      	setLeftVictor(-1);
-	      	setRightVictor(1);
+    public void rotateCCW(double angle) {      	
+      	while (getGyroBearing() > angle || getGyroBearing() < 90) {
+	      	setLeftVictor(-0.75);
+	      	setRightVictor(0.75);
       	}
       	
       	stop();
