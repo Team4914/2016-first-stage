@@ -8,10 +8,13 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.PIDController"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.ShooterBot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.AnalogInput"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.ADXRS450_Gyro"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.RobotMap"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 </qualifiedTypeNameHistroy>

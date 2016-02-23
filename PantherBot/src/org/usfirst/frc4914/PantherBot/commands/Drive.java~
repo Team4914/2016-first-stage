@@ -72,7 +72,7 @@ public class Drive extends Command {
     	} // end of POV button (quick-turn) listening
     	
     	// prints the stuff
-    	System.out.println(Robot.driveTrain.getUltraDistance());
+    	System.out.println(Robot.driveTrain.getUltraVoltage());
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -94,8 +94,8 @@ public class Drive extends Command {
     // BEGIN CUSTOM COMMANDS
     
     public void normalTankDrive() {
-    	Robot.driveTrain.setLeftVictor(Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
-		Robot.driveTrain.setRightVictor(Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
+    	Robot.driveTrain.setLeftVictor(Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
+		Robot.driveTrain.setRightVictor(Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
     } // end of method normalTankDrive()
     
     public void normalStraightDrive() {
@@ -103,13 +103,13 @@ public class Drive extends Command {
     } // end of method normalStraightDrive()
     
     public void invertedTankDrive() {
-    	Robot.driveTrain.setLeftVictor(-Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
-		Robot.driveTrain.setRightVictor(-Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
+    	Robot.driveTrain.setLeftVictor(-Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
+		Robot.driveTrain.setRightVictor(-Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
     } // end of method invertedTankDrive()
     
     public void invertedStraightDrive() {
     	Robot.driveTrain.driveStraight(-Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
     } // end of method invertedStraightDrive()
-     
+    
     // END CUSTOM COMMANDS
 }

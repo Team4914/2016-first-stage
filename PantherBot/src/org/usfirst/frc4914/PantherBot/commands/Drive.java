@@ -94,8 +94,8 @@ public class Drive extends Command {
     // BEGIN CUSTOM COMMANDS
     
     public void normalTankDrive() {
-    	Robot.driveTrain.setLeftVictor(Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
-		Robot.driveTrain.setRightVictor(Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
+    	Robot.driveTrain.setLeftVictor(Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
+		Robot.driveTrain.setRightVictor(Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
     } // end of method normalTankDrive()
     
     public void normalStraightDrive() {
@@ -103,8 +103,8 @@ public class Drive extends Command {
     } // end of method normalStraightDrive()
     
     public void invertedTankDrive() {
-    	Robot.driveTrain.setLeftVictor(-Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
-		Robot.driveTrain.setRightVictor(-Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
+    	Robot.driveTrain.setLeftVictor(-Robot.oi.getDriverJoystickLeft() * Robot.driveTrain.speedMultiplier);
+		Robot.driveTrain.setRightVictor(-Robot.oi.getDriverJoystickRight() * Robot.driveTrain.speedMultiplier);
     } // end of method invertedTankDrive()
     
     public void invertedStraightDrive() {

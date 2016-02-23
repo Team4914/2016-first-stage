@@ -14,6 +14,8 @@ package org.usfirst.frc4914.PantherBot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4914.PantherBot.Robot;
 
+import com.ni.vision.NIVision;
+
 /**
  *
  */
@@ -37,12 +39,20 @@ public class ToggleCameraFeed extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	if (Robot.cameraServerName == "cam0") {
-    		Robot.server.startAutomaticCapture("cam1");
+    	int newId;
+    	if (Robot.currentCam == Robot.camback) {
+    		newId = Robot.camfront;
     	}
-    	else if (Robot.cameraServerName == "cam1") {
-    		Robot.server.startAutomaticCapture("cam0");
+    	else {
+    		newId = Robot.camback;
     	}
+    	NIVision.IMAQdxStopAcquisition(Robot.currentCam);
+    	NIVision.IMAQdxConfigureGrab(newId);
+        NIVision.IMAQdxStartAcquisition(newId);
+        Robot.currentCam = newId;
+        
+      	NIVision.IMAQdxGrab(Robot.currentCam, Robot.frame, 1);
+        Robot.server.setImage(Robot.frame);
     }
 
     // Called repeatedly when this Command is scheduled to run

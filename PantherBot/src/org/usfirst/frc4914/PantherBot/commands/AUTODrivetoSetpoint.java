@@ -23,7 +23,7 @@ public class AUTODrivetoSetpoint extends Command {
 
 	public AUTODrivetoSetpoint(double distance) {
 		requires(Robot.driveTrain);
-		pid = new PIDController(-2, 0, 0, new PIDSource() {
+		pid = new PIDController(-1, 0, 0, new PIDSource() {
 			PIDSourceType m_sourceType = PIDSourceType.kDisplacement;
 
 			public double pidGet() {
@@ -41,8 +41,8 @@ public class AUTODrivetoSetpoint extends Command {
 			}
 		}, new PIDOutput() {
 			public void pidWrite(double d) {
-				Robot.driveTrain.setLeftVictor(d);
-				Robot.driveTrain.setRightVictor(d);
+				Robot.driveTrain.setLeftVictor(-d);
+				Robot.driveTrain.setRightVictor(-d);
 			}
 		});
 		pid.setAbsoluteTolerance(0.01);

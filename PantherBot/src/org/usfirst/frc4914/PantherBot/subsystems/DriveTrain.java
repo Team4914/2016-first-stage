@@ -87,7 +87,7 @@ public class DriveTrain extends Subsystem {
   	 * @param speed the speed to set the right victor to
   	 */
      public void setRightVictor(double speed) {
-     	rightDrive.set(-speed * speedMultiplier);
+     	rightDrive.set(speed * speedMultiplier);
      }
      
      /**
@@ -123,7 +123,7 @@ public class DriveTrain extends Subsystem {
       * @return average voltage of the ultrasonic sensor
       */
      public double getUltraVoltage() {
-    	 if (!(lastUltraReading < 0.17 && lastUltraReading > 0.16)) {
+    	 if (ultra.getAverageVoltage() > 0.2) {
     		 lastUltraReading = ultra.getAverageVoltage();
     	 }
     	 return lastUltraReading;
@@ -163,7 +163,7 @@ public class DriveTrain extends Subsystem {
     public void rotateCCW(double angle) {
     	gyro.reset();
       	
-      	while (getGyroBearing() > angle || getGyroBearing() == 0) {
+      	while (getGyroBearing() > angle || getGyroBearing() < 10) {
 	      	setLeftVictor(-1);
 	      	setRightVictor(1);
       	}

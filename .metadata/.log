@@ -8170,3 +8170,740 @@ java.io.FileNotFoundException: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\.m
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-02-21 21:04:00.938 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.equinox.app 4 2 2016-02-21 21:04:15.422
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.equinox.app".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:354)
+	at org.eclipse.swt.widgets.Shell.close(Shell.java:537)
+	at org.eclipse.ui.splash.AbstractSplashHandler.dispose(AbstractSplashHandler.java:63)
+	at org.eclipse.ui.splash.BasicSplashHandler.dispose(BasicSplashHandler.java:183)
+	at org.eclipse.ui.internal.Workbench$6$1.applicationRunning(Workbench.java:814)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle$1.run(EclipseAppHandle.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.applicationRunning(EclipseAppHandle.java:258)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1074)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-21 21:04:18.986
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 4 0 2016-02-21 21:04:19.120
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:172)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:387)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:500)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:460)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:306)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:3143)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1161)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1073)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1414)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1411)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1384)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1571)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$16(WorkbenchWindow.java:1542)
+	at org.eclipse.ui.internal.WorkbenchWindow$11.run(WorkbenchWindow.java:1603)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1600)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1614)
+	at org.eclipse.ui.internal.WorkbenchWindow$6.close(WorkbenchWindow.java:523)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer$7.shellClosed(WBWRenderer.java:518)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:98)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:308)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1703)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4678)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:354)
+	at org.eclipse.swt.widgets.Tree.getSelection(Tree.java:3446)
+	at org.eclipse.jface.viewers.TreeViewer.getSelection(TreeViewer.java:232)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:311)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2545)
+	at org.eclipse.ui.navigator.CommonViewer.setSelectionToWidget(CommonViewer.java:437)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:3001)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1469)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:366)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1423)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1551)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:534)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:347)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:490)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.StructuredViewer.setFilters(StructuredViewer.java:1649)
+	at org.eclipse.ui.internal.navigator.NavigatorFilterService.updateViewer(NavigatorFilterService.java:270)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.setWorkingSetFilter(WorkingSetActionProvider.java:279)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.setWorkingSetFilter(WorkingSetActionProvider.java:262)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.setWorkingSet(WorkingSetActionProvider.java:309)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.initWorkingSetFilter(WorkingSetActionProvider.java:257)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider$4.run(WorkingSetActionProvider.java:347)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 76 more
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 21:04:20.057
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 21:04:20.065
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 21:04:20.071
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 21:04:20.079
+!MESSAGE Installedjava
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 21:04:20.087
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-21 21:04:20.097
+!MESSAGE Installedcpp
+!SESSION 2016-02-22 15:35:23.505 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 15:36:18.128
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 15:36:18.265
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 15:36:18.292
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 15:36:18.299
+!MESSAGE Installedjava
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 15:36:18.345
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 15:36:18.353
+!MESSAGE Installedcpp
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-22 15:36:20.090
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:40:02.327
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:40:02.333
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:41:46.178
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:41:46.185
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:43:05.527
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:43:05.534
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:44:51.385
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:44:51.391
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:46:44.087
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:46:44.092
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:48:29.735
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:48:29.739
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:51:46.997
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:51:47.001
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:53:30.945
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:53:30.949
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:55:58.841
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:55:58.852
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:57:05.339
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 15:57:05.344
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:04:56.682
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:04:56.687
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:21:39.171
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:21:39.176
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:23:12.270
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:23:12.275
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:26:11.595
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:26:11.634
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:32:28.986
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:32:28.992
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:34:19.229
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:34:19.233
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:35:21.022
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:35:21.027
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:36:06.211
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:36:06.215
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:04.725
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:04.730
+!MESSAGE Targets: debug-deploy, Mode: debug
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:04.966
+!MESSAGE {port=8348, hostname=roborio-4914-FRC.local}
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:04.973
+!MESSAGE Attemping to attach debugger...
+
+!ENTRY WPILib_Java_Robot_Development 4 0 2016-02-22 17:37:06.887
+!MESSAGE Unable to attach debugger. 19 attempts remain - waiting 2 second(s) before retrying...
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:08.896
+!MESSAGE Attemping to attach debugger...
+
+!ENTRY WPILib_Java_Robot_Development 4 0 2016-02-22 17:37:09.908
+!MESSAGE Unable to attach debugger. 18 attempts remain - waiting 2 second(s) before retrying...
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:11.917
+!MESSAGE Attemping to attach debugger...
+
+!ENTRY WPILib_Java_Robot_Development 4 0 2016-02-22 17:37:12.930
+!MESSAGE Unable to attach debugger. 17 attempts remain - waiting 2 second(s) before retrying...
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:14.934
+!MESSAGE Attemping to attach debugger...
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:15.704
+!MESSAGE Debugger attached.
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:52.452
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:37:52.457
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:39:01.561
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:39:01.565
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:40:29.616
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:40:29.622
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:41:30.865
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:41:30.869
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:42:15.015
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:42:15.020
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:42:59.504
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:42:59.508
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:43:38.751
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:43:38.757
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:44:18.667
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:44:18.672
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:45:08.217
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:45:08.223
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:45:48.736
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:45:48.741
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:46:38.691
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:46:38.696
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:47:21.627
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:47:21.631
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:48:15.595
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:48:15.600
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:50:08.776
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:50:08.781
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:50:51.527
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:50:51.532
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:54:34.865
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:54:34.871
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:55:31.575
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:55:31.579
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:56:24.937
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:56:24.941
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:57:27.028
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 17:57:27.033
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:00:24.844
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:00:24.850
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:02:30.397
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:02:30.401
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:04:09.801
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:04:09.807
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:06:33.734
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:06:33.739
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2016-02-22 18:19:08.610 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-22 18:20:46.603
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\cyamo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 18:20:48.697
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 18:20:48.702
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 18:20:48.713
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 18:20:48.717
+!MESSAGE Installedjava
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 18:20:49.266
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-22 18:20:49.272
+!MESSAGE Installedcpp
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:21:18.750
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:21:18.755
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:23:53.248
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:23:53.254
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:25:14.757
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:25:14.761
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:26:33.225
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:26:33.231
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:41:10.690
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:41:10.695
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:41:57.930
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 18:41:57.935
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:07:55.460
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:07:55.464
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:10:54.518
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:10:54.522
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:19:11.957
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:19:11.962
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:23:25.480
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:23:25.487
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:28:53.425
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:28:53.430
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:30:29.535
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:30:29.539
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:32:52.283
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:32:52.288
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:34:22.515
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:34:22.520
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:35:11.698
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:35:11.703
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:36:25.882
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:36:25.887
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:36:37.166
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:36:37.171
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:40:36.101
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:40:36.106
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:42:22.533
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:42:22.539
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:44:54.558
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:44:54.562
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:47:08.556
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:47:08.560
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:49:46.155
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:49:46.160
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:50:01.307
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:50:01.311
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:51:34.515
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:51:34.521
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:55:26.700
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:55:26.705
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:59:13.049
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:59:13.054
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:59:52.267
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 20:59:52.273
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:08:36.211
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:08:36.215
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:09:50.893
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:09:50.898
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:11:44.964
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:11:44.968
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:11:51.958
+!MESSAGE Last deploy running
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:11:51.964
+!MESSAGE Waiting
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:11:51.969
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:11:51.974
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:12:53.384
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:12:53.389
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:14:22.245
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:14:22.249
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:18:18.678
+!MESSAGE Running ant file: C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 21:18:18.683
+!MESSAGE Targets: deploy, Mode: run

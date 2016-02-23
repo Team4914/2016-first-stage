@@ -51,16 +51,16 @@ public class Shooter extends Subsystem {
     }
     
     public void setTopFlySpeed(double speed) {
-    	topFly.set(speed);
+    	topFly.set(-speed);
     }
     
     public void setBottomFlySpeed(double speed) {
-    	bottomFly.set(speed);
+    	bottomFly.set(-speed);
     }
     
     public void setFlySpeed(double topSpeed, double bottomSpeed) {
-    	topFly.set(topSpeed);
-    	bottomFly.set(bottomSpeed);
+    	setTopFlySpeed(topSpeed);
+    	setBottomFlySpeed(bottomSpeed);
     }
     
     public void stopFly() {

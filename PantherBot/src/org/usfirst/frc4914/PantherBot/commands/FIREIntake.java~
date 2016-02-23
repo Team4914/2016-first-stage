@@ -55,7 +55,7 @@ public class FIREIntake extends Command {
     protected void end() {
     	Robot.shooter.setIntakeSpeed(-0.5);
     	Robot.shooter.setBottomFlySpeed(-1);
-    	Timer.delay(1);
+    	Timer.delay(0.75);
     	Robot.shooter.stopIntake();
     	Robot.shooter.stopFly();
     }
