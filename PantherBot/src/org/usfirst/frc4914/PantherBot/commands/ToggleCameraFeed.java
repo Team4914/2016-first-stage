@@ -39,10 +39,8 @@ public class ToggleCameraFeed extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.frame = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
         Robot.session = NIVision.IMAQdxOpenCamera("cam1",
                 NIVision.IMAQdxCameraControlMode.CameraControlModeController);
-        NIVision.IMAQdxConfigureGrab(Robot.session);
     }
 
     // Called repeatedly when this Command is scheduled to run
