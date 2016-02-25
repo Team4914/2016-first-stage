@@ -66,12 +66,13 @@ public class DriveTrain extends Subsystem {
      * DRIVE CONSTANTS
      */
  	public boolean isTankDrive = true;	// if drive is tank drive
- 	public boolean isInvertedDrive = false;	// if controls are inverted or not
+ 	public boolean isInvertedDrive = true;	// if controls are inverted or not
  	public final double speedMultiplier = 0.85;	// speed limit multiplier
  	public double lastUltraReading;
+ 	public final double ANGLE_EPSILON = 3; // gyrometer reading angle reading allowed variance
  	
  	// BEGIN CUSTOM CODE
-     
+ 	
  	/**
  	 * Sets speed for left victor drive at a specified speed. Speed will be toned 
  	 * down by the specified speed multiplier.
@@ -147,19 +148,33 @@ public class DriveTrain extends Subsystem {
     	 // driveControl.free();
      }
      
-     public void rotateCW(double angle) {
-    	gyro.reset();
-      	
-      	while (getGyroBearing() < angle) {
-	      	setLeftVictor(1);
-	      	setRightVictor(-1);
-      	}
-      	
-      	stop();
+     public void rotateCW(double angle) {    	
+    	double initialBearing = gyro.getAngle();
+     	double finalBearing = initialBearing + angle;
+     	
+     	initialBearing += 360;
+     	initialBearing %= 360;
+     	finalBearing += 360;
+     	finalBearing %= 360;
+     	
+       	while (!(gyro.getAngle() > finalBearing - ANGLE_EPSILON && gyro.getAngle() < finalBearing + ANGLE_EPSILON)) {
+ 	      	setLeftVictor(0.75);
+ 	      	setRightVictor(-0.75);
+       	}
+       	
+       	stop();
      }
      
-    public void rotateCCW(double angle) {      	
-      	while (getGyroBearing() > angle || getGyroBearing() < 90) {
+    public void rotateCCW(double angle) {
+    	double initialBearing = gyro.getAngle();
+    	double finalBearing = initialBearing - angle;
+    	
+    	initialBearing += 360;
+    	initialBearing %= 360;
+    	finalBearing += 360;
+    	finalBearing %= 360;
+    	
+      	while (!(gyro.getAngle() > finalBearing - ANGLE_EPSILON && gyro.getAngle() < finalBearing + ANGLE_EPSILON)) {
 	      	setLeftVictor(-0.75);
 	      	setRightVictor(0.75);
       	}
@@ -171,7 +186,8 @@ public class DriveTrain extends Subsystem {
     public void driveStraightWithGyro(double speed) {
     	robotDrive.drive(1, -gyro.getAngle() * 0.03);
     }
-
+    
+    // deprecated
 	public void drive(double d, double d2) {
 		robotDrive.drive(d, d2);
 	}

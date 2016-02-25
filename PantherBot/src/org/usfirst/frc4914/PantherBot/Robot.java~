@@ -126,21 +126,37 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         
+        // quick rotational commands
+        switch(oi.getDriverJoystickPOV()) {
+	    case -1:
+			break;
+		case 90:
+			Robot.driveTrain.rotateCW(90);
+			break;
+		case 180:
+			Robot.driveTrain.rotateCW(180);
+			break;
+		case 270:
+			Robot.driveTrain.rotateCCW(270);
+			break;
+        }
+        
         NIVision.IMAQdxStartAcquisition(session);
 
-        /**
-         * grab an image, draw the circle, and provide it for the camera server
-         * which will in turn send it to the dashboard.
-         */
-        NIVision.Rect rect = new NIVision.Rect(10, 10, 100, 100);
+        /*
+        * grab an image, draw the circle, and provide it for the camera server
+        * which will in turn send it to the dashboard.
+        */
+       // NIVision.Rect rect = new NIVision.Rect(10, 10, 100, 100);
 
-        // while (isOperatorControl() && isEnabled()) {
+       // while (isOperatorControl() && isEnabled()) {
 
-            NIVision.IMAQdxGrab(session, frame, 1);
-            NIVision.imaqDrawLineOnImage(frame, frame, DrawMode.DRAW_VALUE,
-                    new Point(0, 50), new Point(100, 50), 0.0f);
-            
-            CameraServer.getInstance().setImage(frame);
+           NIVision.IMAQdxGrab(session, frame, 1);
+           NIVision.imaqDrawLineOnImage(frame, frame, DrawMode.DRAW_VALUE,
+                   new Point(50, 0), new Point(50, 50), 0.0f);
+           
+           CameraServer.getInstance().setImage(frame);
+
 
             /** robot code here! **/
             Timer.delay(0.005);		// wait for a motor update time
