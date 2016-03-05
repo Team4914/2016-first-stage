@@ -16,6 +16,6 @@
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
-<fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
 </qualifiedTypeNameHistroy>

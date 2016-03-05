@@ -45,9 +45,9 @@ public class DEFENSERockWall extends Command {
     	// resets gyros before auto
     	Robot.driveTrain.resetGyro();
     	// drives forward
-    	Robot.driveTrain.setLeftVictor(0.45);
-    	Robot.driveTrain.setRightVictor(0.45);
-    	Timer.delay(2.75);
+    	Robot.driveTrain.setLeftVictor(0.6);
+    	Robot.driveTrain.setRightVictor(0.6);
+    	Timer.delay(3);
     	// initiates brakes
     	Robot.driveTrain.setLeftVictor(-0.25);
     	Robot.driveTrain.setRightVictor(-0.25);

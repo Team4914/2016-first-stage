@@ -11,6 +11,7 @@
 
 package org.usfirst.frc4914.PantherBot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4914.PantherBot.Robot;
 
@@ -53,27 +54,55 @@ public class Drive extends Command {
     		if (Robot.driveTrain.isTankDrive) { normalTankDrive(); }
     		else { normalStraightDrive(); }
     	} // end of robot drive type tests
+        
+        /*
+        // quick rotational commands
+        switch(oi.getDriverJoystickPOV()) {
+	    case -1:
+			break;
+		case 90:
+			Robot.driveTrain.rotateCW(90);
+			break;
+		case 180:
+			Robot.driveTrain.rotateCW(180);
+			break;
+		case 270:
+			Robot.driveTrain.rotateCCW(270);
+			break;
+        }
+        */
     	
     	/*
-    	 * listens for POV buttons for quick-turn orientation
+    	 * Shooter Intake
     	 */
-    	switch (Robot.oi.getDriverJoystickPOV()) {
-    	case -1:
-    		break;
-    	case 90:
-    		new Turn90CW();
-    		break;
-    	case 180:
-    		new Turn180CW();
-    		break;
-    	case 270:
-    		new Turn90CCW();
-    		break;
-    	} // end of POV button (quick-turn) listening
+    	if (Robot.oi.isDriverJoystickLeftTriggerPressed()) {
+        	Robot.shooter.setIntakeSpeed(1);
+    	}
+    	else if (!Robot.oi.isDriverJoystickLeftTriggerPressed()) {
+    		// new FIREIntakeSequence();
+    		Robot.shooter.stopIntake();
+    	}
     	
-    	// prints the stuff
-    	System.out.println(Robot.driveTrain.getUltraVoltage());
+    	/*
+    	 * Right trigger close shoot
+    	 */
+    	if (Robot.oi.isDriverJoystickRightTriggerPressed()) {
+        	Robot.shooter.setFlySpeed(0.57, 0.95);
+        	// 0.57 0.95
+        	
+        	/*
+            Timer.delay(2);
+            Robot.shooter.setIntakeSpeed(1);
+            Timer.delay(0.5);
+            Robot.shooter.stopIntake();
+            Robot.shooter.stopFly();
+            */
+    	}
+    	else {
+    		Robot.shooter.stopFly();
+    	}
     }
+    
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

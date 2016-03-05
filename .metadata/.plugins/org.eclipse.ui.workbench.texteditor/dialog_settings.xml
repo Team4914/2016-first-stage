@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="winchSlave" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ultra"/>
 			<item value="speedController1"/>
 			<item value="cANTalon2"/>
 			<item value="cANTalon1"/>
@@ -15,7 +16,6 @@
 			<item value="setpoint"/>
 			<item value="safety"/>
 			<item value="safe"/>
-			<item value="Smart"/>
 		</list>
 		<list key="replacehistory">
 			<item value="winchSlave"/>
