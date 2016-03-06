@@ -43,6 +43,7 @@ public class OperateLift extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	/*
     	// forklift operation
     	if ((Robot.forklift.getFLiftQEValue() < Forklift.setpoint54 && 
 	    		Robot.forklift.getFLiftQEValue() > 0
@@ -74,6 +75,9 @@ public class OperateLift extends Command {
 				Robot.oi.getShooterJoystickRight() < 0)) {	
         	Robot.forklift.setHook(Robot.oi.getShooterJoystickRight());
     	}
+    	*/
+    	Robot.forklift.setHook(Robot.oi.getShooterJoystickRight());
+		Robot.forklift.setFLift(-Robot.oi.getShooterJoystickLeft());
     	
     	// QE Vals
     	System.out.println("Hook: " + Robot.forklift.getHookQEValue());

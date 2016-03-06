@@ -39,6 +39,7 @@ public class FIRECloseSequence extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	// NOT USED, GO TO drive.java INSTEAD
     	Robot.shooter.setFlySpeed(0.57, 0.95);
         Timer.delay(3);
         Robot.shooter.setIntakeSpeed(1);

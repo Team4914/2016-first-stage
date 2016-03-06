@@ -39,7 +39,7 @@ public class FIREFarSequence extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.shooter.setFlySpeed(0.75, 0.9);
+    	// Robot.shooter.setFlySpeed(0.75, 0.9);
     	/*
         Timer.delay(2);
         Robot.shooter.setIntakeSpeed(1);
@@ -51,17 +51,17 @@ public class FIREFarSequence extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.shooter.setFlySpeed(0.75, 0.9);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return true;
+        return false;
     }
 
     // Called once after isFinished returns true
     protected void end() {
     	Robot.shooter.stopFly();
-    	Robot.shooter.stopIntake();
     }
 
     // Called when another command which requires one or more of the same

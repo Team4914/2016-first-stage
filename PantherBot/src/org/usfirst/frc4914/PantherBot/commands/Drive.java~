@@ -43,7 +43,6 @@ public class Drive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	boolean justFinishedTheIntakeSequence = false;
     	/*
     	 * robot drive type tests
     	 */
@@ -55,63 +54,53 @@ public class Drive extends Command {
     		if (Robot.driveTrain.isTankDrive) { normalTankDrive(); }
     		else { normalStraightDrive(); }
     	} // end of robot drive type tests
-    	
-    	/*
-    	 * listens for POV buttons for quick-turn orientation
-    	 * WITH INTAKE BUTTONS
-    	 *
-    	switch (Robot.oi.getDriverJoystickPOV()) {
-    	case -1:
-    		break;
-    	case 90:
-    		Robot.driveTrain.rotateCW(90);
-    		break;
-    	case 180:
-    		Robot.driveTrain.rotateCW(180);
-    		break;
-    	case 270:
-    		Robot.driveTrain.rotateCCW(270);
-    		break;
-    	} // end of POV button (quick-turn) listening */
-    	
-    	/*
-    	 * WITHOUT INTAKE BUTTONS
-    	 *
-    	if (Robot.oi.isDriverJoystickRightTriggerPressed()) {
-    		new RotateCW90();
-    	}
-    	else if (Robot.oi.isDriverJoystickLeftTriggerPressed()) {
-    		new RotateCCW90();
-    	}
-    	*/
+        
+        /*
+        // quick rotational commands
+        switch(oi.getDriverJoystickPOV()) {
+	    case -1:
+			break;
+		case 90:
+			Robot.driveTrain.rotateCW(90);
+			break;
+		case 180:
+			Robot.driveTrain.rotateCW(180);
+			break;
+		case 270:
+			Robot.driveTrain.rotateCCW(270);
+			break;
+        }
+        */
     	
     	/*
     	 * Shooter Intake
     	 */
     	if (Robot.oi.isDriverJoystickLeftTriggerPressed()) {
         	Robot.shooter.setIntakeSpeed(1);
-        	justFinishedTheIntakeSequence = true;
     	}
     	else if (!Robot.oi.isDriverJoystickLeftTriggerPressed()) {
     		// new FIREIntakeSequence();
     		Robot.shooter.stopIntake();
-    		justFinishedTheIntakeSequence = false;
     	}
     	
     	/*
     	 * Right trigger close shoot
     	 */
     	if (Robot.oi.isDriverJoystickRightTriggerPressed()) {
-        	Robot.shooter.setFlySpeed(0.6, 1);
+        	Robot.shooter.setFlySpeed(0.57, 0.95);
+        	// 0.57 0.95
+        	
+        	/*
             Timer.delay(2);
             Robot.shooter.setIntakeSpeed(1);
             Timer.delay(0.5);
             Robot.shooter.stopIntake();
             Robot.shooter.stopFly();
+            */
     	}
-
-    	// System.out.println("Right QE: " + Robot.oi.isShooterJoystickLeftTriggerPressed());
-    	// System.out.println("Left QE: " + Robot.oi.isShooterJoystickRightTriggerPressed());
+    	else {
+    		Robot.shooter.stopFly();
+    	}
     }
     
 

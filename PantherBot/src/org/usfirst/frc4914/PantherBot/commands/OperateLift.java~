@@ -13,6 +13,7 @@ package org.usfirst.frc4914.PantherBot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4914.PantherBot.Robot;
+import org.usfirst.frc4914.PantherBot.subsystems.Forklift;
 
 /**
  *
@@ -42,33 +43,45 @@ public class OperateLift extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	/*
     	// forklift operation
-    	if ((Robot.forklift.getFLiftQEValue() < Robot.forklift.setpoint54 && 
+    	if ((Robot.forklift.getFLiftQEValue() < Forklift.setpoint54 && 
 	    		Robot.forklift.getFLiftQEValue() > 0
 	    		)|| (
 	    		Robot.forklift.getFLiftQEValue() <= 0 && 
 	    		Robot.oi.getShooterJoystickLeft() > 0
 	    		) || (
-	    		Robot.forklift.getFLiftQEValue() >= Robot.forklift.setpoint54 && 
+	    		Robot.forklift.getFLiftQEValue() >= Forklift.setpoint54 && 
 				Robot.oi.getShooterJoystickLeft() < 0 &&
 				Robot.forklift.locked
 				) || (
 				Robot.forklift.getFLiftQEValue() >= 54 &&
-				!Robot.forklift.locked)) {
+				Robot.forklift.getFLiftQEValue() < Forklift.forkliftMax &&
+				!Robot.forklift.locked
+				) || (
+				Robot.forklift.getFLiftQEValue() >= Forklift.forkliftMax &&
+				Robot.oi.getShooterJoystickLeft() < 0)) {
     		Robot.forklift.setFLift(-Robot.oi.getShooterJoystickLeft());
     	}
     	
     	// hook operation
-    	if ((Robot.forklift.getHookQEValue() < Robot.forklift.setpointHookCeil && 
+    	if ((Robot.forklift.getHookQEValue() < Forklift.setpointHookCeil && 
 	    		Robot.forklift.getHookQEValue() > 0
 	    		) || (
 	    		Robot.forklift.getHookQEValue() <= 0 && 
 	    		Robot.oi.getShooterJoystickRight() > 0
 	    		) || (
-	    		Robot.forklift.getHookQEValue() >= Robot.forklift.setpointHookCeil && 
+	    		Robot.forklift.getHookQEValue() >= Forklift.setpointHookCeil && 
 				Robot.oi.getShooterJoystickRight() < 0)) {	
         	Robot.forklift.setHook(Robot.oi.getShooterJoystickRight());
     	}
+    	*/
+    	Robot.forklift.setHook(Robot.oi.getShooterJoystickRight());
+		Robot.forklift.setFLift(-Robot.oi.getShooterJoystickLeft());
+    	
+    	// QE Vals
+    	System.out.println("Hook: " + Robot.forklift.getHookQEValue());
+    	System.out.println("FLIFT: " + Robot.forklift.getFLiftQEValue());
     }
 
     // Make this return true when this Command no longer needs to run execute()

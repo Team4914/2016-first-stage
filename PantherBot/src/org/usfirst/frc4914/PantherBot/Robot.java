@@ -70,14 +70,14 @@ public class Robot extends IterativeRobot {
         // constructed yet. Thus, their requires() statements may grab null
         // pointers. Bad news. Don't move it.
         oi = new OI();
-        
 
         server = CameraServer.getInstance();
-        server.setQuality(10);
+        server.setQuality(25);
         //the camera name (ex "cam0") can be found through the roborio web interface
-        try { server.startAutomaticCapture("cam1"); }
+        try { server.startAutomaticCapture("cam0"); }
         catch (Exception e) { }
     }
+    
 
     /**
      * This function is called when the disabled button is hit.
