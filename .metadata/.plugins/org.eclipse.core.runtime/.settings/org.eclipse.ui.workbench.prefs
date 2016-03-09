@@ -5,3 +5,4 @@ ColorsAndFontsPreferencePage.selectedElement=Corg.eclipse.egit.ui.UncommittedCha
 PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.m2e.discovery;
 eclipse.preferences.version=1
 org.eclipse.egit.ui.UncommittedChangeForegroundColor=192,192,192
+org.eclipse.ui.r30.org.eclipse.egit.ui.UncommittedChangeForegroundColor=255,255,255

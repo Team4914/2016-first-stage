@@ -18,4 +18,12 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.vision.AxisCamera"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.ColorImage"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.BinaryImage"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.NIVisionException"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision.ParticleFilterCriteria2"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision.MeasurementType"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.ParticleAnalysisReport"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.vision.AxisCamera.Resolution"/>
 </qualifiedTypeNameHistroy>
