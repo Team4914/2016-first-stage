@@ -252,6 +252,8 @@ public class Robot extends IterativeRobot {
     	// Robot.driveTrain.rotateCCW(60);
     	
     	// 30 degrees CW
+     	
+     	Robot.driveTrain.resetGyro();
     	
     	double initialBearing = Robot.driveTrain.getGyroBearing();
      	double finalBearing = initialBearing + 30;
@@ -260,8 +262,6 @@ public class Robot extends IterativeRobot {
      	initialBearing %= 360;
      	finalBearing += 360;
      	finalBearing %= 360;
-     	
-     	Robot.driveTrain.resetGyro();
      	
        	while (!(Robot.driveTrain.getGyroBearing() > finalBearing - Robot.driveTrain.ANGLE_EPSILON && 
        			Robot.driveTrain.getGyroBearing() < finalBearing + Robot.driveTrain.ANGLE_EPSILON)) {
@@ -275,6 +275,8 @@ public class Robot extends IterativeRobot {
        	Robot.driveTrain.stop();
        	
        	// 60 degrees CCW
+     	
+     	Robot.driveTrain.resetGyro();
        	
        	initialBearing = Robot.driveTrain.getGyroBearing();
     	finalBearing = initialBearing - 60;
@@ -283,8 +285,6 @@ public class Robot extends IterativeRobot {
     	initialBearing %= 360;
     	finalBearing += 360;
     	finalBearing %= 360;
-     	
-     	Robot.driveTrain.resetGyro();
     	
       	while (!(Robot.driveTrain.getGyroBearing() > finalBearing - Robot.driveTrain.ANGLE_EPSILON && 
       			Robot.driveTrain.getGyroBearing() < finalBearing + Robot.driveTrain.ANGLE_EPSILON)) {

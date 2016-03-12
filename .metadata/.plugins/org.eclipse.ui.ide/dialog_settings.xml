@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\WindsorBot"/>
 			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot - ImgRec"/>
 			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\ShooterBot"/>
 			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot"/>
@@ -13,5 +14,7 @@
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
 	</section>
 </section>
