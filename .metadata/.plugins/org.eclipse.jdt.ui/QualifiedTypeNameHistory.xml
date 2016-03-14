@@ -14,18 +14,20 @@
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.vision.AxisCamera"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.ColorImage"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.BinaryImage"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.NIVisionException"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.ParticleFilterCriteria2"/>
-<fullyQualifiedTypeName name="com.ni.vision.NIVision.MeasurementType"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.ParticleAnalysisReport"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.vision.AxisCamera.Resolution"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.HSLImage"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.RGBImage"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.AnalogGyro"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision.MeasurementType"/>
+<fullyQualifiedTypeName name="javax.management.timer.Timer"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.WindsorBot.Robot"/>
 </qualifiedTypeNameHistroy>

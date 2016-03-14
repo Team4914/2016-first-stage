@@ -142,9 +142,10 @@ public class Robot extends IterativeRobot {
     
     /*
      * ATTEMPT AT VISION PROCESSING TAKE 1
-     */    
+     */
     
-    public void processImage() {
+    @SuppressWarnings("null")
+	public void processImage() {
     	ColorImage image = null;
     	BinaryImage thresholdImage = null;
     	BinaryImage bigObjectsImage = null;
@@ -152,19 +153,27 @@ public class Robot extends IterativeRobot {
     	BinaryImage filteredImage = null;
     	ParticleFilterCriteria2[] cc = new ParticleFilterCriteria2[1];
     	
-    	// cc[0] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_BOUNDING_RECT_WIDTH, 
-    			0, cameraPixelWidth, 0, 0);
-    	// cc[1] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_BOUNDING_RECT_HEIGHT, 
-    			0, cameraPixelHeight, 0, 0);
+    	// cc[0] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_BOUNDING_RECT_WIDTH, 0, cameraPixelWidth, 0, 0);
+    	// cc[1] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_BOUNDING_RECT_HEIGHT, 0, cameraPixelHeight, 0, 0);
     	
-    	cc[0] = new ParticleFilterCriteria2(IMAQ_MT_AREA, 150, 0, 0);
+    	cc[0] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_AREA, 150, 0, 0, cameraPixelHeight);
     	
     	try { // processes images
-    		System.out.println("entered");
+    		SmartDashboard.putString("IPS: ", 
+    				"Entered primary try-catch block.");
+    			
     		camera.getImage(image);
+    		SmartDashboard.putString("IPS: ", 
+    				SmartDashboard.getString("IPS: ") + "\nSuccessfully captured image.");
+    		
     		System.out.println(image.toString());
-			//image.write("originalImage");
+			
+/*
+			image.write("originalImage");
 			System.out.println("wrote image");
+    		SmartDashboard.putString("IPS: ", 
+    				SmartDashboard.getString("IPS: ") + "\nSuccessfully wrote to memory.");
+*/
 			
     		System.out.println("captured");
     		thresholdImage = image.thresholdHSV(111, 149, 222, 255, 91, 255);
@@ -176,39 +185,40 @@ public class Robot extends IterativeRobot {
     		filteredImage = convexHullImage.particleFilter(cc);
     		System.out.println("filtered");
     		reports = filteredImage.getOrderedParticleAnalysisReports(1);
+    		
     		// for (int i = 0; i <= reports.length; i++) {
-    			// reports data
-    			System.out.println("Center of mass x: " + reports[0].center_mass_x);
-    			System.out.println("Center of mass y: " + reports[0].center_mass_y);
-    			System.out.println("Bounding rect width: " + reports[0].boundingRectWidth);
-    			System.out.println("Bounding rect height: " + reports[0].boundingRectHeight);
-    			
-    			// formula calculation variables
-    			double distance;
-    			double Tft = 2.66;
-    			double FOVpixel = cameraPixelHeight;
-    			double Tpixel = 2 * 85;
-    			
-    			// formula calculation
-    			distance = Tft * FOVpixel / (2 * Tpixel * Math.tan(37.4));
-    			
-    			// distance to target output
-    			System.out.println("Distance To Target: " + distance);
-    			
-    			/*
-    			 * 49 degrees optimal vertical FOV for M1013
-    			 * 51 degrees manual vertical FOV for M1013
-    			 * 67 degrees manual horizontal FOV for M1013
-    			 * 
-    			 * 37.4 degrees optimal verical FOV for M1011
-    			 */
-    			
-    			System.out.println("Centered: " + isCentered());
-    			
-    			// image write to RIO
-    			filteredImage.write("/filteredImage.png");
-    			
-    		// }
+			
+    		// reports data
+			System.out.println("Center of mass x: " + reports[0].center_mass_x);
+			System.out.println("Center of mass y: " + reports[0].center_mass_y);
+			System.out.println("Bounding rect width: " + reports[0].boundingRectWidth);
+			System.out.println("Bounding rect height: " + reports[0].boundingRectHeight);
+			
+			// formula calculation variables
+			double distance;
+			double Tft = 2.66;
+			double FOVpixel = cameraPixelHeight;
+			double Tpixel = 2 * 85;
+			
+			// formula calculation
+			distance = Tft * FOVpixel / (2 * Tpixel * Math.tan(37.4));
+			
+			// distance to target output
+			System.out.println("Distance To Target: " + distance);
+			
+			/*
+			 * 49 degrees optimal vertical FOV for M1013
+			 * 51 degrees manual vertical FOV for M1013
+			 * 67 degrees manual horizontal FOV for M1013
+			 * 
+			 * 37.4 degrees optimal verical FOV for M1011
+			 */
+			
+			System.out.println("Centered: " + isCentered());
+			
+			// image write to RIO
+			filteredImage.write("/filteredImage.png");
+    		
     	} catch (Exception e) { System.out.println(e.toString());}
     	
     	try { // attempts to free all images
@@ -217,7 +227,7 @@ public class Robot extends IterativeRobot {
         	bigObjectsImage.free();
         	convexHullImage.free();
         	filteredImage.free();
-        	System.out.println("write successful");
+        	System.out.println("free successful");
     	} catch (NIVisionException e) { } catch (Exception e) { }
     } // end of method processImage()
     
@@ -230,6 +240,7 @@ public class Robot extends IterativeRobot {
     
     public void centerRobot() {
     	// 30 degrees left and right
+    	// reset gyro
     	// Robot.driveTrain.rotateCW(30);
     	// Robot.driveTrain.rotateCCW(60);
     	

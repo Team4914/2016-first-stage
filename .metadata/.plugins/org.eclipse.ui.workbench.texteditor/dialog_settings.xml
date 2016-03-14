@@ -2,26 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="IPS" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Image Processing Status"/>
+			<item value="shooterRJ"/>
+			<item value="shooterLJ"/>
+			<item value="shooter"/>
+			<item value="shooterJoystick"/>
+			<item value="Under"/>
 			<item value="ultra"/>
 			<item value="speedController1"/>
-			<item value="cANTalon2"/>
-			<item value="cANTalon1"/>
-			<item value="cANTalon"/>
-			<item value="setpoint"/>
-			<item value="safety"/>
-			<item value="safe"/>
 		</list>
 		<list key="replacehistory">
+			<item value="IPS"/>
+			<item value="codriverRJ"/>
+			<item value="codriverLJ"/>
+			<item value="codriver"/>
+			<item value="codriverJoystick"/>
+			<item value="Below"/>
 			<item value="winchSlave"/>
 			<item value="hookCAN"/>
-			<item value="winchCAN"/>
-			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
