@@ -38,7 +38,6 @@ public class OI {
 
 
         // SmartDashboard Buttons
-        SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("Shoot Low Goal", new ShootLowGoal());
         SmartDashboard.putData("Shoot High Goal", new ShootHighGoal());
         SmartDashboard.putData("Soft EStop", new SoftEStop());

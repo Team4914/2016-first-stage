@@ -66,41 +66,5 @@ public class DriveTrain extends Subsystem {
      public void resetGyro() {
     	 gyro.reset();
      }
-     
-     public void rotateCW(double angle) {    	
-    	double initialBearing = gyro.getAngle();
-     	double finalBearing = initialBearing + angle;
-     	
-     	initialBearing += 360;
-     	initialBearing %= 360;
-     	finalBearing += 360;
-     	finalBearing %= 360;
-     	
-       	while (!(gyro.getAngle() > finalBearing - ANGLE_EPSILON && gyro.getAngle() < finalBearing + ANGLE_EPSILON)) {
- 	      	setLeftVictor(1);
- 	      	setRightVictor(-1);
-       	}
-       	
-       	stop();
-     }
-     
-    public void rotateCCW(double angle) {
-    	double initialBearing = gyro.getAngle();
-    	double finalBearing = initialBearing - angle;
-    	
-    	initialBearing += 360;
-    	initialBearing %= 360;
-    	finalBearing += 360;
-    	finalBearing %= 360;
-    	
-      	while (!(gyro.getAngle() > finalBearing - ANGLE_EPSILON && 
-      			gyro.getAngle() < finalBearing + ANGLE_EPSILON) ||
-      			) {
-	      	setLeftVictor(-1);
-	      	setRightVictor(1);
-      	}
-      	
-      	stop();
-    }
     // END CUSTOM CODE
 }

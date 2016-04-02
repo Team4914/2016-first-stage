@@ -29,16 +29,15 @@ public class ShootHighGoal extends Command {
     	// warms up flwheels
     	Robot.shooter.setShooter(Shooter.highTopFly, Shooter.highBottomFly);
     	Timer.delay(2);
-    	// runs intake
-    	Robot.shooter.setIntake(1);
-    	Timer.delay(3);
     }
 
     protected void execute() {
+    	// runs intake
+    	Robot.shooter.setIntake(1);
     }
 
     protected boolean isFinished() {
-        return true;
+        return !Robot.oi.isDriverRT();
     }
 
     protected void end() {

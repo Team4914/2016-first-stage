@@ -30,16 +30,15 @@ public class ShootLowGoal extends Command {
     	// warms up flwheels
     	Robot.shooter.setShooter(Shooter.lowTopFly, Shooter.lowBottomFly);
     	Timer.delay(1.5);
-    	// runs intake
-    	Robot.shooter.setIntake(1);
-    	Timer.delay(3);
     }
 
     protected void execute() {
+    	// runs intake
+    	Robot.shooter.setIntake(1);
     }
 
     protected boolean isFinished() {
-        return true;
+        return !Robot.oi.isDriverLT();
     }
 
     protected void end() {

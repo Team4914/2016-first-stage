@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.CommandGroup"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Ultrasonic"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.PIDController"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.ShooterBot.Robot"/>
@@ -11,7 +9,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.RobotMap"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
-<fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.PantherBot.Robot"/>
@@ -30,4 +27,8 @@
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.MeasurementType"/>
 <fullyQualifiedTypeName name="javax.management.timer.Timer"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.WindsorBot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
+<fullyQualifiedTypeName name="com.ni.vision.NIVision.ImageType"/>
 </qualifiedTypeNameHistroy>

@@ -1,27 +1,22 @@
 
 package org.usfirst.frc.team4914.robot;
 
+import java.util.Comparator;
+import java.util.Vector;
+
+import org.usfirst.frc.team4914.robot.commands.ExampleCommand;
+import org.usfirst.frc.team4914.robot.subsystems.ExampleSubsystem;
+
+import com.ni.vision.NIVision;
+import com.ni.vision.NIVision.Image;
+import com.ni.vision.NIVision.ImageType;
+
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.image.BinaryImage;
-import edu.wpi.first.wpilibj.image.ColorImage;
-import edu.wpi.first.wpilibj.image.HSLImage;
-import edu.wpi.first.wpilibj.image.NIVisionException;
-import edu.wpi.first.wpilibj.image.ParticleAnalysisReport;
-import edu.wpi.first.wpilibj.image.RGBImage;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team4914.robot.commands.ExampleCommand;
-import org.usfirst.frc.team4914.robot.subsystems.ExampleSubsystem;
-
-import com.ni.vision.NIVision;
-import com.ni.vision.NIVision.DrawMode;
-import com.ni.vision.NIVision.Image;
-import com.ni.vision.NIVision.ParticleFilterCriteria2;
-import com.ni.vision.NIVision.ShapeMode;
-
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.vision.AxisCamera;
@@ -34,42 +29,81 @@ import edu.wpi.first.wpilibj.vision.AxisCamera;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	//A structure to hold measurements of a particle
+	public class ParticleReport implements Comparator<ParticleReport>, Comparable<ParticleReport>{
+		double PercentAreaToImageArea;
+		double rectWidth;
+		double rectHeight;
+		double centerOfMassX;
+		double centerOfMassY;
+		
+		public int compareTo(ParticleReport r)
+		{
+			double compareX = Math.abs(r.centerOfMassX/5 - this.centerOfMassX/5);
+			double compareY = Math.abs(r.centerOfMassY/5 - this.centerOfMassY/5);
+			return (int) (compareX + compareY);
+		}
+		
+		public int compare(ParticleReport r1, ParticleReport r2)
+		{
+			double compareX = Math.abs(r1.centerOfMassX/5 - r2.centerOfMassX/5);
+			double compareY = Math.abs(r1.centerOfMassY/5 - r2.centerOfMassY/5);
+			return (int) (compareX + compareY);
+		}
+	};
+
+	//Structure to represent the Score for the various tests used for target identification
+	public class Score {
+		double Aspect;
+	};
+
+	//Images
+	Image frame;
+	Image binaryFrame;
+	int imaqError;
+	
+	//Camera
+    AxisCamera camera;
+    
+    //Constants
+	NIVision.Range GOAL_HUE_RANGE = new NIVision.Range(111, 149);	//Default hue range for yellow tote
+	NIVision.Range GOAL_SAT_RANGE = new NIVision.Range(222, 255);	//Default saturation range for yellow tote
+	NIVision.Range GOAL_VAL_RANGE = new NIVision.Range(91, 255);	//Default value range for yellow tote
+	double AREA_MINIMUM = 0.5; //Default Area minimum for particle as a percentage of total image area
+	double ASPECT_RATIO_MIN = 90.0;  //Minimum aspect ratio to be considered a target
+	double VIEW_ANGLE = 49.4; //View angle fo camera, set to Axis m1011 by default, 64 for m1013, 51.7 for 206, 52 for HD3000 square, 60 for HD3000 640x480
+	NIVision.ParticleFilterCriteria2 criteria[] = new NIVision.ParticleFilterCriteria2[1];
+	NIVision.ParticleFilterOptions2 filterOptions = new NIVision.ParticleFilterOptions2(0,0,1,1);
+	Score score = new Score();
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 
     Command autonomousCommand;
     SendableChooser chooser;
-    /*
-     * Camera fields
-     */
-    private AxisCamera camera = new AxisCamera("169.254.219.147");
-    private int cameraPixelWidth = 640;
-    private int cameraPixelHeight = 480;
-    private AxisCamera.Resolution cameraResolution = AxisCamera.Resolution.k640x480;
-    private ParticleAnalysisReport[] reports;
 
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
     public void robotInit() {
 		oi = new OI();
         chooser = new SendableChooser();
         chooser.addDefault("Default Auto", new ExampleCommand());
-//        chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
         
-        camera.writeMaxFPS(20);
-        camera.writeCompression(30);
-        camera.writeResolution(cameraResolution);
+        // BEGIN IMGREC //
+        camera = new AxisCamera("169.254.219.147");
+        // create images
+		frame = NIVision.imaqCreateImage(ImageType.IMAGE_RGB, 0);
+		binaryFrame = NIVision.imaqCreateImage(ImageType.IMAGE_U8, 0);
+		criteria[0] = new NIVision.ParticleFilterCriteria2(NIVision.MeasurementType.MT_AREA_BY_IMAGE_AREA, AREA_MINIMUM, 100.0, 0, 0);
+		// optional smartdashboard display
+		SmartDashboard.putNumber("target hue min", GOAL_HUE_RANGE.minValue);
+		SmartDashboard.putNumber("target hue max", GOAL_HUE_RANGE.maxValue);
+		SmartDashboard.putNumber("target sat min", GOAL_SAT_RANGE.minValue);
+		SmartDashboard.putNumber("target sat max", GOAL_SAT_RANGE.maxValue);
+		SmartDashboard.putNumber("target val min", GOAL_VAL_RANGE.minValue);
+		SmartDashboard.putNumber("target val max", GOAL_VAL_RANGE.maxValue);
+		SmartDashboard.putNumber("Area min %", AREA_MINIMUM);
     }
-	
-	/**
-     * This function is called once each time the robot enters Disabled mode.
-     * You can use it to reset any subsystem information you want to clear when
-	 * the robot is disabled.
-     */
+
     public void disabledInit(){
 
     }
@@ -78,230 +112,91 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 	}
 
-	/**
-	 * This autonomous (along with the chooser code above) shows how to select between different autonomous modes
-	 * using the dashboard. The sendable chooser code works with the Java SmartDashboard. If you prefer the LabVIEW
-	 * Dashboard, remove all of the chooser code and uncomment the getString code to get the auto name from the text box
-	 * below the Gyro
-	 *
-	 * You can add additional auto modes by adding additional commands to the chooser code above (like the commented example)
-	 * or additional comparisons to the switch structure below with additional strings & commands.
-	 */
     public void autonomousInit() {
         autonomousCommand = (Command) chooser.getSelected();
-        
-		/* String autoSelected = SmartDashboard.getString("Auto Selector", "Default");
-		switch(autoSelected) {
-		case "My Auto":
-			autonomousCommand = new MyAutoCommand();
-			break;
-		case "Default Auto":
-		default:
-			autonomousCommand = new ExampleCommand();
-			break;
-		} */
-    	
-    	// schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
         
-        processImage();
-        // returnIfCentered();
-    }
+        // BEGIN IMGREC //        
+        //Grab image
+        camera.getImage(frame);
+        //Update threshold values from SmartDashboard
+		GOAL_HUE_RANGE.minValue = (int)SmartDashboard.getNumber("Tote hue min", GOAL_HUE_RANGE.minValue);
+		GOAL_HUE_RANGE.maxValue = (int)SmartDashboard.getNumber("Tote hue max", GOAL_HUE_RANGE.maxValue);
+		GOAL_SAT_RANGE.minValue = (int)SmartDashboard.getNumber("Tote sat min", GOAL_SAT_RANGE.minValue);
+		GOAL_SAT_RANGE.maxValue = (int)SmartDashboard.getNumber("Tote sat max", GOAL_SAT_RANGE.maxValue);
+		GOAL_VAL_RANGE.minValue = (int)SmartDashboard.getNumber("Tote val min", GOAL_VAL_RANGE.minValue);
+		GOAL_VAL_RANGE.maxValue = (int)SmartDashboard.getNumber("Tote val max", GOAL_VAL_RANGE.maxValue);
+		//Threshold image
+		NIVision.imaqColorThreshold(binaryFrame, frame, 255, NIVision.ColorMode.HSV, GOAL_HUE_RANGE, GOAL_SAT_RANGE, GOAL_VAL_RANGE);
+		//Send particle count to dashboard
+		int numParticles = NIVision.imaqCountParticles(binaryFrame, 1);
+		SmartDashboard.putNumber("Masked particles", numParticles);
+		//Send masked image to dashboard to assist in tweaking mask.
+		CameraServer.getInstance().setImage(binaryFrame);
+		//filter out small particles
+		float areaMin = (float)SmartDashboard.getNumber("Area min %", AREA_MINIMUM);
+		criteria[0].lower = areaMin;
+		imaqError = NIVision.imaqParticleFilter4(binaryFrame, binaryFrame, criteria, filterOptions, null);
+		//Send particle count after filtering to dashboard
+		numParticles = NIVision.imaqCountParticles(binaryFrame, 1);
+		SmartDashboard.putNumber("Filtered particles", numParticles);
+		
+		if(numParticles > 0)
+		{
+			//Measure particles and sort by particle size
+			Vector<ParticleReport> particles = new Vector<ParticleReport>();
+			for(int particleIndex = 0; particleIndex < numParticles; particleIndex++) {
+				ParticleReport par = new ParticleReport();
+				par.PercentAreaToImageArea = NIVision.imaqMeasureParticle(binaryFrame, particleIndex, 0, NIVision.MeasurementType.MT_AREA_BY_IMAGE_AREA);
+				par.rectWidth = NIVision.imaqMeasureParticle(binaryFrame, particleIndex, 0, NIVision.MeasurementType.MT_BOUNDING_RECT_WIDTH);
+				par.rectHeight = NIVision.imaqMeasureParticle(binaryFrame, particleIndex, 0, NIVision.MeasurementType.MT_BOUNDING_RECT_HEIGHT);
+				par.centerOfMassX = NIVision.imaqMeasureParticle(binaryFrame, particleIndex, 0, NIVision.MeasurementType.MT_CENTER_OF_MASS_X);
+				par.centerOfMassY = NIVision.imaqMeasureParticle(binaryFrame, particleIndex, 0, NIVision.MeasurementType.MT_CENTER_OF_MASS_Y);
 
-    /**
-     * This function is called periodically during autonomous
-     */
+				particles.add(par);
+			}
+			particles.sort(null);
+
+			//This example only Score the largest particle. Extending to score all particles and choosing the desired one is left as an exercise
+			//for the reader. Note that this Score and reports information about a single particle (single L shaped target). To get accurate information 
+			//about the location of the tote (not just the distance) you will need to correlate two adjacent targets in order to find the true center of the tote.
+			score.Aspect = AspectScore(particles.elementAt(0));
+			SmartDashboard.putNumber("Aspect", score.Aspect);
+			boolean isTarget = score.Aspect > ASPECT_RATIO_MIN;
+			
+			// lines bot up
+			if (isTarget) {
+				// bot
+			}
+
+			//Send distance and tote status to dashboard. The bounding rect, particularly the horizontal center (left - right) may be useful for rotating/driving towards a tote
+			SmartDashboard.putBoolean("IsTarget", isTarget);
+		} else {
+			SmartDashboard.putBoolean("IsTarget", false);
+		}
+
+		Timer.delay(0.005); // wait for a motor update time
+	}
+
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
     }
 
     public void teleopInit() {
-		// This makes sure that the autonomous stops running when
-        // teleop starts running. If you want the autonomous to 
-        // continue until interrupted by another command, remove
-        // this line or comment it out.
+
         if (autonomousCommand != null) autonomousCommand.cancel();
     }
 
-    /**
-     * This function is called periodically during operator control
-     */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        
-        processImage();
-        System.out.println(isCentered());
     }
     
-    /**
-     * This function is called periodically during test mode
-     */
     public void testPeriodic() {
         LiveWindow.run();
     }
     
-    /*
-     * ATTEMPT AT VISION PROCESSING TAKE 1
-     */
-    
-    @SuppressWarnings("null")
-	public void processImage() {
-    	ColorImage image = null;
-    	BinaryImage thresholdImage = null;
-    	BinaryImage bigObjectsImage = null;
-    	BinaryImage convexHullImage = null;
-    	BinaryImage filteredImage = null;
-    	ParticleFilterCriteria2[] cc = new ParticleFilterCriteria2[1];
-    	
-    	// cc[0] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_BOUNDING_RECT_WIDTH, 0, cameraPixelWidth, 0, 0);
-    	// cc[1] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_BOUNDING_RECT_HEIGHT, 0, cameraPixelHeight, 0, 0);
-    	
-    	cc[0] = new ParticleFilterCriteria2(NIVision.MeasurementType.MT_AREA, 150, 0, 0, cameraPixelHeight);
-    	
-    	try { // processes images
-    		SmartDashboard.putString("IPS: ", 
-    				"Entered primary try-catch block.");
-    			
-    		camera.getImage(image);
-    		SmartDashboard.putString("IPS: ", 
-    				SmartDashboard.getString("IPS: ") + "\nSuccessfully captured image.");
-    		
-    		System.out.println(image.toString());
-			
-/*
-			image.write("originalImage");
-			System.out.println("wrote image");
-    		SmartDashboard.putString("IPS: ", 
-    				SmartDashboard.getString("IPS: ") + "\nSuccessfully wrote to memory.");
-*/
-			
-    		System.out.println("captured");
-    		thresholdImage = image.thresholdHSV(111, 149, 222, 255, 91, 255);
-    		System.out.println("thresholded");
-    		bigObjectsImage = thresholdImage.removeSmallObjects(true, 2);
-    		System.out.println("big objected");
-    		convexHullImage = bigObjectsImage.convexHull(false);
-    		System.out.println("convex hulled");
-    		filteredImage = convexHullImage.particleFilter(cc);
-    		System.out.println("filtered");
-    		reports = filteredImage.getOrderedParticleAnalysisReports(1);
-    		
-    		// for (int i = 0; i <= reports.length; i++) {
-			
-    		// reports data
-			System.out.println("Center of mass x: " + reports[0].center_mass_x);
-			System.out.println("Center of mass y: " + reports[0].center_mass_y);
-			System.out.println("Bounding rect width: " + reports[0].boundingRectWidth);
-			System.out.println("Bounding rect height: " + reports[0].boundingRectHeight);
-			
-			// formula calculation variables
-			double distance;
-			double Tft = 2.66;
-			double FOVpixel = cameraPixelHeight;
-			double Tpixel = 2 * 85;
-			
-			// formula calculation
-			distance = Tft * FOVpixel / (2 * Tpixel * Math.tan(37.4));
-			
-			// distance to target output
-			System.out.println("Distance To Target: " + distance);
-			
-			/*
-			 * 49 degrees optimal vertical FOV for M1013
-			 * 51 degrees manual vertical FOV for M1013
-			 * 67 degrees manual horizontal FOV for M1013
-			 * 
-			 * 37.4 degrees optimal verical FOV for M1011
-			 */
-			
-			System.out.println("Centered: " + isCentered());
-			
-			// image write to RIO
-			filteredImage.write("/filteredImage.png");
-    		
-    	} catch (Exception e) { System.out.println(e.toString());}
-    	
-    	try { // attempts to free all images
-        	image.free();
-        	thresholdImage.free();
-        	bigObjectsImage.free();
-        	convexHullImage.free();
-        	filteredImage.free();
-        	System.out.println("free successful");
-    	} catch (NIVisionException e) { } catch (Exception e) { }
-    } // end of method processImage()
-    
-    public boolean isCentered() {
-		double midpoint = cameraPixelWidth / 2;
-		double epsilon = 50;
-		return reports[0].center_mass_x < midpoint + epsilon &&
-			   reports[0].center_mass_x > midpoint - epsilon;
-    }
-    
-    public void centerRobot() {
-    	// 30 degrees left and right
-    	// reset gyro
-    	// Robot.driveTrain.rotateCW(30);
-    	// Robot.driveTrain.rotateCCW(60);
-    	
-    	// 30 degrees CW
-     	
-     	double fakeGyro = 0;
-    	
-    	double initialBearing = fakeGyro;
-     	double finalBearing = initialBearing + 30;
-     	
-     	initialBearing += 360;
-     	initialBearing %= 360;
-     	finalBearing += 360;
-     	finalBearing %= 360;
-     	
-       	while (!(fakeGyro > finalBearing - 3 && 
-       			fakeGyro < finalBearing + 3)) {
-       		
-       		System.out.println("Turning clockwise...");
- 	      	
- 	      	processImage();
- 	      	if (isCentered()) { return; }
- 	      	
- 	      	fakeGyro++;
- 	      	
-       	}
-       	
-       	System.out.println("Stopped turning.");
-       	
-       	// 60 degrees CCW
-       	
-       	fakeGyro = 360;
-       	
-       	initialBearing = fakeGyro;
-    	finalBearing = initialBearing - 60;
-    	
-    	initialBearing += 360;
-    	initialBearing %= 360;
-    	finalBearing += 360;
-    	finalBearing %= 360;
-    	
-      	while (!(fakeGyro > finalBearing - 3 && 
-      			fakeGyro < finalBearing + 3)) {
-      		
-      		System.out.println("Turning counterclockwise...");
-      		
-      		processImage();
-      		if (isCentered()) { return; }
-      		
-      		fakeGyro--;
-      	}
-      	
-      	System.out.println("Stopped turning.");
-      	
-      	System.out.println("If you are reading this, the auto-centering did not work.");
-    	
-    	// above code should theoretically work
-    }
-    
-    public void returnIfCentered() {
-    	while (!isCentered()) { }
-    	System.out.println("Centered.");
-    }
+    double AspectScore(ParticleReport report)
+	{
+		return 100*((report.rectHeight)/(report.rectWidth));
+	}
 }

@@ -134,9 +134,9 @@ public class OI {
     public int getDriverJoystickPOV() { return driverJoystick.getPOV(0); }
     public int getShooterJoystickPOV() { return driverJoystick.getPOV(0); }
     
-    public boolean isDriverJoystickRightTriggerPressed() { return driverJoystick.getRawAxis(3) > 0.25; }
-    public boolean isDriverJoystickLeftTriggerPressed() { return driverJoystick.getRawAxis(2) > 0.25; }
-    public boolean isShooterJoystickRightTriggerPressed() { return shooterJoystick.getRawAxis(3) > 0.25; }
-    public boolean isShooterJoystickLeftTriggerPressed() { return shooterJoystick.getRawAxis(2) > 0.25; }
+    public boolean isDriverJoystickRightTriggerPressed() { return driverJoystick.getRawAxis(3) > 0.1; }
+    public boolean isDriverJoystickLeftTriggerPressed() { return driverJoystick.getRawAxis(2) > 0.1; }
+    public boolean isShooterJoystickRightTriggerPressed() { return shooterJoystick.getRawAxis(3) > 0.1; }
+    public boolean isShooterJoystickLeftTriggerPressed() { return shooterJoystick.getRawAxis(2) > 0.1; }
 }
 
