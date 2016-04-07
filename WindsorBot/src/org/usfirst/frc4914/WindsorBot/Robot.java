@@ -56,11 +56,11 @@ public class Robot extends IterativeRobot {
         oi = new OI();
         
         SmartDashboard.putData("Autonomous Sequence", autoChooser);
-        autoChooser.addObject("3 second", new DriveStraight(3));
-        autoChooser.addDefault("4 second", new DriveStraight(4));
-        autoChooser.addObject("5 second", new DriveStraight(5));
-        autoChooser.addObject("6 second", new DriveStraight(6));
-        autoChooser.addObject("7 second", new DriveStraight(7));
+        autoChooser.addObject("3 second", new DriveStraight(3, 0.6, true));
+        autoChooser.addDefault("4 second", new DriveStraight(4, 0.6, true));
+        autoChooser.addObject("5 second", new DriveStraight(5, 0.6, true));
+        autoChooser.addObject("6 second", new DriveStraight(6, 0.6, true));
+        autoChooser.addObject("7 second", new DriveStraight(7, 0.6, true));
     }
 
     /**

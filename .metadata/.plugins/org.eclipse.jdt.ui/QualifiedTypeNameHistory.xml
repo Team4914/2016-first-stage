@@ -26,9 +26,9 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.MeasurementType"/>
 <fullyQualifiedTypeName name="javax.management.timer.Timer"/>
-<fullyQualifiedTypeName name="org.usfirst.frc4914.WindsorBot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.ImageType"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.WindsorBot.Robot"/>
 </qualifiedTypeNameHistroy>
