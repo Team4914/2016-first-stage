@@ -22,8 +22,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.HSLImage"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.image.RGBImage"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.AnalogGyro"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.MeasurementType"/>
 <fullyQualifiedTypeName name="javax.management.timer.Timer"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
@@ -31,4 +29,8 @@
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.Image"/>
 <fullyQualifiedTypeName name="com.ni.vision.NIVision.ImageType"/>
 <fullyQualifiedTypeName name="org.usfirst.frc4914.WindsorBot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
+<fullyQualifiedTypeName name="org.usfirst.frc4914.GRTBot.subsystems.Shooter"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 </qualifiedTypeNameHistroy>

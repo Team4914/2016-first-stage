@@ -92,7 +92,7 @@ public class Forklift extends Subsystem {
 	}
 	
 	public void setHook(double outputValue) {
-		hookCAN.set(outputValue);
+		hookCAN.set(outputValue * 0.4);
 	}
 	
 	public void setBrake(boolean brake) {

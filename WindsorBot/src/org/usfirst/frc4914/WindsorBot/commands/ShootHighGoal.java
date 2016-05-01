@@ -37,7 +37,7 @@ public class ShootHighGoal extends Command {
     }
 
     protected boolean isFinished() {
-        return !Robot.oi.isDriverRT();
+        return false;
     }
 
     protected void end() {

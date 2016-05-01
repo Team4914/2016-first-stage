@@ -38,7 +38,7 @@ public class ShootLowGoal extends Command {
     }
 
     protected boolean isFinished() {
-        return !Robot.oi.isDriverLT();
+        return false;
     }
 
     protected void end() {
