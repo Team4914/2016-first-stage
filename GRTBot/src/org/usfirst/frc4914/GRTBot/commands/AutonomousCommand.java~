@@ -11,6 +11,7 @@
 
 package org.usfirst.frc4914.GRTBot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4914.GRTBot.Robot;
 
@@ -41,6 +42,12 @@ public class AutonomousCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.drivetrain.driveStraight(0.2);
+    	Timer.delay(1);
+    	new Turn(true, 180);
+    	Robot.drivetrain.driveStraight(-0.2);
+    	Timer.delay(2);
+    	Robot.drivetrain.stop();
     }
 
     // Make this return true when this Command no longer needs to run execute()

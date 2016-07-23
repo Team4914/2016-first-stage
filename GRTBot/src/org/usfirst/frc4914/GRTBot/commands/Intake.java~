@@ -56,7 +56,7 @@ public class Intake extends Command {
     protected void end() {
     	Robot.shooter.setIntake(-1);
     	Robot.shooter.stopFly();
-    	Timer.delay(2);
+    	Timer.delay(0.3);
     	Robot.shooter.stopIntake();
     }
 

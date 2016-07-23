@@ -68,4 +68,3 @@ public class Shooter extends Subsystem {
     	setIntake(0);
     }
 }
-

@@ -32,8 +32,10 @@ public class OperateDrive extends Command {
     	if (Robot.drivetrain.isInvertedDrive) { invertedTankDrive(); }
     	else if (!Robot.drivetrain.isInvertedDrive) { normalTankDrive(); }
     	// codriver shoot Z-axis rotation
-    	Robot.drivetrain.setLeftVictor(Robot.oi.codriverZ() * 0.3);
-    	Robot.drivetrain.setRightVictor(-Robot.oi.codriverZ() * 0.3);
+    	if (Robot.oi.driverLJ() == 0 && Robot.oi.driverRJ() == 0) {
+    		Robot.drivetrain.setLeftVictor(Robot.oi.codriverZ() * 0.5);
+    		Robot.drivetrain.setRightVictor(-Robot.oi.codriverZ() * 0.5);
+    	}
     }
 
     protected boolean isFinished() {
