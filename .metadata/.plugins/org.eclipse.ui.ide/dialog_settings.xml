@@ -5,8 +5,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\frcte\Documents\GitHub\4914-FRC-FINAL\GRTBot"/>
 			<item value="C:\Users\frcte\Documents\GitHub\4914-FRC-FINAL"/>
+			<item value="C:\Users\frcte\Documents\GitHub\4914-FRC-FINAL\GRTBot"/>
 			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\WindsorBot"/>
 			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\PantherBot - ImgRec"/>
 			<item value="C:\Users\cyamo\Documents\GitHub\4914-FRC-FINAL\ShooterBot"/>
